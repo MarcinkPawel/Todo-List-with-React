@@ -1,4 +1,14 @@
 import Form from "./Form";
+import List from "./List";
+import Buttons from "./Buttons";
+import Section from "./Section";
+
+const tasks = [
+  { id: 1, content: "lose weight", done: false },
+  { id: 2, content: "study React at least an hour a day", done: true },
+];
+
+const hideDoneTask = false;
 
 function App() {
   return (
@@ -6,21 +16,16 @@ function App() {
       <header>
         <h1 className="main__heading">Tasks List</h1>
       </header>
-
-      <section className="section">
-        <h2 className="section__heading">Add new task</h2>
-        <Form />
-      </section>
-      <section className="section">
-        <div className="section__header">
-          <h2 className="section__heading ">Tasks List</h2>
-          <div className="section__toggle "></div>
-        </div>
-        <div className="section__list">
-          <ul className="list ">
-          </ul>
-        </div>
-      </section>
+      <Section sectionHeading="Add new task" headerContent={ <Form />} 
+      />
+      
+      <Section 
+      sectionHeading="Tasks List" 
+      headerContent={<Buttons tasks={tasks} hideDoneTask={hideDoneTask} /> }
+      list= {<List tasks={tasks} hideDoneTask={hideDoneTask} />} 
+      changeGrid="section__header--grid"
+      />
+      
     </div>
 
   );

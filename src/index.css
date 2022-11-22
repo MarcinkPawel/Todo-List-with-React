@@ -12,7 +12,12 @@ html {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: rgba(189, 188, 188, 0.521);
+  background-color: rgba(189, 188, 188, 0.522);
   word-break: break-word;
+}
+
+.main {
+  flex-basis: 800px;
+  margin: 5%;
 
 }
