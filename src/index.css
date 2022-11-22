@@ -1,6 +1,5 @@
 html {
-  box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;  
 }
 
 *, ::after, ::before {
@@ -10,6 +9,7 @@ html {
 .body {
   background-color: rgba(189, 188, 188, 0.522);
   word-break: break-word;
+  font-family: 'Lato', sans-serif;
 }
 
 .main {
