@@ -1,0 +1,32 @@
+.button {
+    border: none;
+    background-color: white;
+    color: rgb(0, 128, 128);
+    padding: 10px 0;
+    margin-right: 10px;
+    align-self: center;
+    transition: 1s;
+}
+
+.button:hover {
+    color: rgba(31, 100, 100, 0.74);
+    transform: scale(1.1);
+}
+
+.button:active {
+    color: rgba(0, 128, 128, 0.5);
+    transform: scale(1.1);
+}
+
+.button:disabled {
+    color: grey;
+    transform: none;
+}
+
+.button--hidden {
+    display: none;
+}
+
+.button__toggle {
+    display: inline-block;
+}
