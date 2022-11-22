@@ -1,7 +1,7 @@
 # To Do List
 
 Simple To Do List .
-[See the project](https://marcinkpawel.github.io/toDoList/)
+[See the project](https://marcinkpawel.github.io/Todo-List-with-React/)
 
 ## Usage
 
