@@ -5,16 +5,19 @@ import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
 
-const tasks = [
-  { id: 1, content: "lose weight", done: false },
-  { id: 2, content: "study React at least an hour a day", done: true },
-];
-
 function App() {
   const [hideDoneTask, setHideDoneTask] = useState(false);
+  const [tasks, setTasks] = useState([
+    { id: 1, content: "lose weight", done: false },
+    { id: 2, content: "study React at least an hour a day", done: true },
+  ]);
 
   const toggleHideDoneTask = () => {
     setHideDoneTask((hideDoneTask) => !hideDoneTask);
+  };
+
+  const removeTask = (id) => {
+    setTasks((tasks) => tasks.filter((task) => task.id !== id));
   };
 
   return (
@@ -34,7 +37,13 @@ function App() {
             toggleHideDoneTask={toggleHideDoneTask}
           />
         }
-        list={<List tasks={tasks} hideDoneTask={hideDoneTask} />}
+        list={
+          <List
+            tasks={tasks}
+            hideDoneTask={hideDoneTask}
+            removeTask={removeTask}
+          />
+        }
         changeGrid="section__header--grid"
       />
     </div>
