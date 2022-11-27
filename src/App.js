@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Form from "./Form";
 import List from "./List";
 import Buttons from "./Buttons";
@@ -9,9 +10,13 @@ const tasks = [
   { id: 2, content: "study React at least an hour a day", done: true },
 ];
 
-const hideDoneTask = false;
-
 function App() {
+  const [hideDoneTask, setHideDoneTask] = useState(false);
+
+  const toggleHideDoneTask = () => {
+    setHideDoneTask((hideDoneTask) => !hideDoneTask);
+  };
+
   return (
     <div className="main">
       <Header title="Tasks List" />
@@ -22,7 +27,13 @@ function App() {
 
       <Section
         sectionHeading="Tasks List"
-        headerContent={<Buttons tasks={tasks} hideDoneTask={hideDoneTask} />}
+        headerContent={
+          <Buttons
+            tasks={tasks}
+            hideDoneTask={hideDoneTask}
+            toggleHideDoneTask={toggleHideDoneTask}
+          />
+        }
         list={<List tasks={tasks} hideDoneTask={hideDoneTask} />}
         changeGrid="section__header--grid"
       />
