@@ -33,11 +33,23 @@ function App() {
   };
 
   const setAllDone = () => {
-    setTasks((tasjs) => tasks.map((task) => ({
+    setTasks((tasjs) =>
+      tasks.map((task) => ({
         ...task,
         done: true,
       }))
     );
+  };
+
+  const addNewTask = (content) => {
+    setTasks(tasks => [
+        ...tasks,
+        {
+          content,
+          done: false,
+          id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
+        },
+      ]);
   };
 
   return (
@@ -46,7 +58,10 @@ function App() {
       <header>
         <h1 className="main__heading">Tasks List</h1>
       </header>
-      <Section sectionHeading="Add new task" headerContent={<Form />} />
+      <Section 
+      sectionHeading="Add new task" 
+      headerContent={<Form addNewTask={addNewTask}/>} 
+      />
 
       <Section
         sectionHeading="Tasks List"
