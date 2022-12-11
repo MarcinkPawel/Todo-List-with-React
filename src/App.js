@@ -1,3 +1,4 @@
+import "./App.css";
 import { useState } from "react";
 import Form from "./Form";
 import List from "./List";
@@ -33,7 +34,7 @@ function App() {
   };
 
   const setAllDone = () => {
-    setTasks((tasjs) =>
+    setTasks((tasks) =>
       tasks.map((task) => ({
         ...task,
         done: true,
