@@ -5,16 +5,16 @@ import List from "./List";
 import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
+import { toLocalStorage, fromLocalStorage } from "./Utils/LocalStorage";
 
 function App() {
   const [hideDoneTask, setHideDoneTask] = useState(false);
   const [tasks, setTasks] = useState(() => {
-    const localData = localStorage.getItem("tasks");
-    return localData ? JSON.parse(localData) : [];
+    return fromLocalStorage();
   });
 
   useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
+    toLocalStorage(tasks);
   }, [tasks]);
 
   const toggleHideDoneTask = () => {
