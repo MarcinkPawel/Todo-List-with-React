@@ -17,7 +17,7 @@ const Form = ({ addNewTask }) => {
 
   const focusInput = () => {
     inputRef.current.focus();
-  };
+    };
 
 
   return (
@@ -29,7 +29,7 @@ const Form = ({ addNewTask }) => {
         onChange={(event) => setNewTaskContent(event.target.value)}
       />
       <SubmitTask 
-      onClick={focusInput}>
+        onClick={focusInput}>
         Add Task
       </SubmitTask>
     </NewTaskSection>
