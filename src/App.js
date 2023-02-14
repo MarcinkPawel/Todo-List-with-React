@@ -4,7 +4,6 @@ import Form from "./Form";
 import List from "./List";
 import Buttons from "./Buttons";
 import Section from "./Section";
-import Header from "./Header";
 import { toLocalStorage, fromLocalStorage } from "./Utils/LocalStorage";
 
 function App() {
@@ -59,9 +58,8 @@ function App() {
 
   return (
     <div className="main">
-      <Header title="Tasks List" />
       <header>
-        <h1 className="main__heading">Tasks List</h1>
+        <h1>Tasks List</h1>
       </header>
       <Section
         sectionHeading="Add new task"

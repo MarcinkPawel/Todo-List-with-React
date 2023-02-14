@@ -1,13 +1,14 @@
-import "./style.css";
+import {SectionStyle, Header, SubHeader} from "./styled";
+
 
 const Section = ({ sectionHeading, headerContent, list, changeGrid }) => (
-  <section className="section">
-    <div className={`section__header ${changeGrid}`}>
-      <h2 className="section__heading ">{sectionHeading}</h2>
+  <SectionStyle>
+    <Header>
+     <SubHeader>{sectionHeading}</SubHeader>
       {headerContent}
-    </div>
-    <div className="section__list">{list}</div>
-  </section>
+    </Header>
+    <Header>{list}</Header>
+  </SectionStyle>
 );
 
 export default Section;
