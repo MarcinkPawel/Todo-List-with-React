@@ -1,13 +1,11 @@
-import {SectionStyle, Header, SubHeader, Grid} from "./styled";
+import {SectionStyle, Header, SubHeader} from "./styled";
 
 
 const Section = ({ sectionHeading, headerContent, list, changeGrid }) => (
   <SectionStyle>
-    <Header changeGrid= {Grid}>
-      
+    <Header grid={changeGrid}>
      <SubHeader>{sectionHeading}</SubHeader>
       {headerContent}
-      
     </Header>
     <Header>{list}</Header>
   </SectionStyle>
