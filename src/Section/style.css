@@ -1,9 +1,0 @@
-.section__header--grid {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: 50px;
-    gap: 0px 10px;
-    grid-auto-flow: row;
-    align-items: center;
-}
-
