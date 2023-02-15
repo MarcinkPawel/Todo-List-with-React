@@ -53,7 +53,7 @@ function App() {
             toggleTaskDone={toggleTaskDone}
           />
         }
-        changeGrid="section__header--grid"
+        changeGrid
       />
     </div>
   );
