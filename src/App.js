@@ -5,7 +5,7 @@ import List from "./List";
 import Buttons from "./Buttons";
 import Section from "./Section";
 import { toLocalStorage } from "./Utils/LocalStorage";
-import {useTask} from "./Utils/useTaskLogic";
+import { useTasks } from "./Utils/useTasks";
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
       toggleTaskDone, 
       setAllDone, 
       addNewTask,
-  } = useTask();
+  } = useTasks();
   
   useEffect(() => {
     toLocalStorage(tasks);

@@ -1,4 +1,4 @@
-import {SectionStyle, Header, SubHeader} from "./styled";
+import { SectionStyle, Header, SubHeader } from "./styled";
 
 
 const Section = ({ sectionHeading, headerContent, list, changeGrid }) => (

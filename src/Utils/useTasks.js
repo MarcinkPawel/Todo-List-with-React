@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { fromLocalStorage } from "./LocalStorage";
 
-export const useTask = () => {
+export const useTasks = () => {
     const [hideDoneTask, setHideDoneTask] = useState(false);
     const [tasks, setTasks] = useState(() => {
         return fromLocalStorage();

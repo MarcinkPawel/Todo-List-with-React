@@ -28,8 +28,9 @@ export const Button = styled.button`
     height: 30px;
     border: none;
     color: white;
+`;
 
-  ${({toggleDone}) => toggleDone && css`
+export const ToggleDoneButton = styled(Button)`
     background-color: rgb(0, 128, 0);
     transition: 1s;
 
@@ -39,17 +40,16 @@ export const Button = styled.button`
         &:active {
             background-color: rgba(0, 128, 0, 0.5);
         };
-  `}
+`;
 
-  ${({remove}) => remove && css`
+export const RemoveButton = styled(Button)`
     background-color: rgb(255, 0, 0);
     transition: 1s;
 
-        &:hover {
-            background-color: rgba(255, 0, 0, 0.75);
-        }
-        &:active {
-            background-color: rgba(255, 0, 0, 0.5);
-        }
-  `}
+      &:hover {
+        background-color: rgba(255, 0, 0, 0.75);
+      };
+      &:active {
+        background-color: rgba(255, 0, 0, 0.5);
+        };
 `;
