@@ -7,7 +7,8 @@ Simple To Do List .
 
 To do list is a simple and easy to use web which will not allow you to create complex and long term plans, although it is perfect day-to-day planner. It will help to go through your work day, mark completed tasks or even delete or hide those which are already done.  
 
-![toDoList](https://user-images.githubusercontent.com/103523918/199225246-c8e8b57a-f2eb-4344-9e15-ed814d94d5c9.gif)
+![toDoList](https://user-images.githubusercontent.com/103523918/221185488-956c111f-941f-42b8-8697-980fca0929d9.gif)
+
 
 
 ## Content 
@@ -17,9 +18,9 @@ Its content was built with the use of my knoweledge at that time
  - CSS
  - JavaScript
  - React
+ - Redux
  - Responsive Web Design
  - Normalize
- - BEM
  - Grid
  
 ## Contribution
