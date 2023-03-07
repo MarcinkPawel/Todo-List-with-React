@@ -6,6 +6,7 @@ import {
   selectIsEveryTaskDone,
   toggleHideDone,
   setAllDone,
+  fetchExampleTasks,
 } from "../tasksSlice";
 
 const Buttons = () => {
@@ -17,6 +18,7 @@ const Buttons = () => {
 
   return (
     <div>
+      <Button onClick={() => dispatch(fetchExampleTasks())}>Download previous tasks</Button>
       {!areTasksEmpty && (
         <>
           <Button onClick={() => dispatch(toggleHideDone())}>
