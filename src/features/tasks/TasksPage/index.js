@@ -1,10 +1,10 @@
-import "../../tasks.css";
-import Form from "../tasks/Form";
-import List from "../tasks/List";
-import Buttons from "../tasks/Buttons";
-import Section from "../../common/Section";
+import "../../../tasks.css";
+import Form from "./Form";
+import List from "./List";
+import Buttons from "./Buttons";
+import Section from "../../../common/Section";
 
-function Tasks() {
+function TasksPage() {
 
   return (
     <div className="main">
@@ -29,4 +29,4 @@ function Tasks() {
   );
 }
 
-export default Tasks;
+export default TasksPage;

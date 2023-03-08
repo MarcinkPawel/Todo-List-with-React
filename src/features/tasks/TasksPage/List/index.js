@@ -12,7 +12,8 @@ import {
   selectHideDone,
   toggleTaskDone,
   removeTask,
-} from "../tasksSlice";
+} from "../../tasksSlice";
+import { Link } from "react-router-dom";
 
 const List = () => {
   const tasks = useSelector(selectTasks);
@@ -30,7 +31,7 @@ const List = () => {
           </ToggleDoneButton>
           <TaskDone 
             done={task.done}>
-            {task.content}
+            <Link to={`/tasks/${task.id}`}>{task.content}</Link>
           </TaskDone>
           <RemoveButton 
             onClick={() => dispatch(removeTask(task.id))}>

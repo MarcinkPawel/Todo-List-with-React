@@ -1,5 +1,6 @@
-import { HashRouter, Link, Switch, Route } from "react-router-dom";
-import Tasks from "./features/tasks/Tasks";
+import { HashRouter, NavLink, Switch, Route, Redirect } from "react-router-dom";
+import TasksPage from "./features/tasks/TasksPage";
+import TaskPage from "./features/tasks/TaskPage";
 import Author from "./features/Author";
 
 export default () => (
@@ -7,19 +8,29 @@ export default () => (
     <nav>
       <ul>
         <li>
-          <Link to="/tasks">Tasks</Link>
+          <NavLink activeClassName="active" to="/tasks">
+            Tasks
+          </NavLink>
         </li>
         <li>
-          <Link to="/author">About</Link>
+          <NavLink activeClassName="active" to="/author">
+            About
+          </NavLink>
         </li>
       </ul>
     </nav>
     <Switch>
-      <Route patch="/tasks">
-        <Tasks />
+    <Route path="/tasks/:id">
+        <TaskPage />
       </Route>
-      <Route patch="/author">
+      <Route path="/tasks">
+        <TasksPage />
+      </Route>
+      <Route path="/author">
         <Author />
+      </Route>
+      <Route path="/">
+        <Redirect to="/tasks" />
       </Route>
     </Switch>
   </HashRouter>
