@@ -6,6 +6,8 @@ const tasksSlice = createSlice({
   initialState: {
     tasks: getTasksFromLocalStorage(),
     hideDone: false,
+    isLoading: false,
+    error: null,
   },
   reducers: {
     addTask: ({ tasks }, { payload: task }) => {
@@ -26,7 +28,18 @@ const tasksSlice = createSlice({
     removeTask: (state, action) => {
       state.tasks = state.tasks.filter((task) => task.id !== action.payload);
     },
-    fetchExampleTasks: () => {},
+    fetchExampleTasks: (state) => {
+      state.isLoading = true;
+      state.error = null;
+    },
+    fetchExampleTasksSuccess: (state, { payload: tasks }) => {
+      state.isLoading = false;
+      state.tasks = tasks;
+    },
+    fetchExampleTasksFailure: (state, { payload: error }) => {
+      state.isLoading = false;
+      state.error = error;
+    },
     setTasks: (state, { payload: tasks }) => {
       state.tasks = tasks;
     },
@@ -40,6 +53,8 @@ export const {
   setAllDone,
   removeTask,
   fetchExampleTasks,
+  fetchExampleTasksFailure,
+  fetchExampleTasksSuccess,
   setTasks,
 } = tasksSlice.actions;
 
@@ -62,7 +77,7 @@ export const selectTasksByQuery = (state, query) => {
   }
 
   return tasks.filter(({ content }) =>
-    content.includes(query.trim())
+    content.toUpperCase().includes(query.trim().toUpperCase())
   );
 };
 

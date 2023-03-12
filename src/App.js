@@ -1,26 +1,14 @@
-import { HashRouter, NavLink, Switch, Route, Redirect } from "react-router-dom";
+import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
 import TasksPage from "./features/tasks/TasksPage";
 import TaskPage from "./features/tasks/TaskPage";
 import Author from "./features/Author";
+import Nav from "./common/Nav";
 
 export default () => (
   <HashRouter>
-    <nav>
-      <ul>
-        <li>
-          <NavLink activeClassName="active" to="/tasks">
-            Tasks
-          </NavLink>
-        </li>
-        <li>
-          <NavLink activeClassName="active" to="/author">
-            About
-          </NavLink>
-        </li>
-      </ul>
-    </nav>
+    <Nav />
     <Switch>
-    <Route path="/tasks/:id">
+      <Route path="/tasks/:id">
         <TaskPage />
       </Route>
       <Route path="/tasks">

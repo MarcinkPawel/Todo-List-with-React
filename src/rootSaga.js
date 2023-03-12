@@ -1,5 +1,5 @@
 import {all} from "redux-saga/effects";
-import { tasksSaga } from "./tasksSaga";
+import { tasksSaga } from "../src/features/tasks/tasksSaga";
 
 
 export default function* rootSaga() {

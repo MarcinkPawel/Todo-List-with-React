@@ -14,11 +14,6 @@ export const NewTaskSection = styled.form`
 
 `;
 
-export const EnterTask = styled.input`
-    padding: 10px;
-    border: 1px solid rgb(221, 212, 212);    
-`;
-
 export const SubmitTask = styled.button`
     border: none;
     background-color: rgb(0, 128, 128);
