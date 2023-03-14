@@ -36,10 +36,6 @@ const tasksSlice = createSlice({
       state.isLoading = false;
       state.tasks = tasks;
     },
-    fetchExampleTasksFailure: (state, { payload: error }) => {
-      state.isLoading = false;
-      state.error = error;
-    },
     setTasks: (state, { payload: tasks }) => {
       state.tasks = tasks;
     },
@@ -80,5 +76,7 @@ export const selectTasksByQuery = (state, query) => {
     content.toUpperCase().includes(query.trim().toUpperCase())
   );
 };
+
+export const selectIsLoading = (state) => state.tasks.isLoading;
 
 export default tasksSlice.reducer;

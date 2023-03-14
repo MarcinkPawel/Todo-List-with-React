@@ -6,6 +6,7 @@ import { fetchExampleTasks, selectTasks, fetchExampleTasksFailure, fetchExampleT
 
 function* fetchExampleTasksHandler() {
   try {
+    yield put(fetchExampleTasks());
     yield delay(2000); 
     const exampleTasks = yield call(getExampleTasks);
     yield put(fetchExampleTasksSuccess(exampleTasks));  
