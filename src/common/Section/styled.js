@@ -1,13 +1,14 @@
 import styled, { css } from "styled-components";
 
 export const Wrapper = styled.div`
-  padding: 10px;
+  padding: 0 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 `;
 
 export const SectionStyle = styled.section`
+  margin-bottom: 7px;
   padding: 15px;
   border: 1px solid rgba(189, 188, 188, 0.521);
   border-collapse: collapse;
@@ -35,8 +36,9 @@ export const Header = styled.div`
 
 export const SubHeader = styled.h2`
   font-size: 20px;
+  margin: 8px 0;
 `;
 export const HeaderContent = styled.span`
-  padding: 0 20px 10px 20px;
+  padding: 10px;
   font-size: 16px;
 `;

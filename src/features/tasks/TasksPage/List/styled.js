@@ -1,55 +1,71 @@
 import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
 
 export const TaskList = styled.ul`
   padding: 0;
 `;
 
 export const Item = styled.li`
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    gap: 20px;
-    padding: 10px;
-    border-bottom: 1px solid gray;
-    align-items: center;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 20px;
+  padding: 10px;
+  border-bottom: 1px solid gray;
+  align-items: center;
 
-  ${({ hidden }) => hidden && css`
+  ${({ hidden }) =>
+    hidden &&
+    css`
       display: none;
-  `}
+    `}
 `;
 
 export const TaskDone = styled.span`
-  ${({ done }) => done && css`
-    text-decoration: line-through;
-  `}
+  text-decoration: none;
+  ${({ done }) =>
+    done &&
+    css`
+      text-decoration: line-through;
+    `}
+`;
+
+export const StyledLink = styled(Link).attrs(() => ({}))`
+  ${({ done }) =>
+    done &&
+    css`
+      text-decoration: line-through;
+    `}
+  text-decoration: none;
+  color: rgb(0, 128, 128);
 `;
 
 export const Button = styled.button`
-    width: 30px;
-    height: 30px;
-    border: none;
-    color: white;
+  width: 30px;
+  height: 30px;
+  border: none;
+  color: white;
 `;
 
 export const ToggleDoneButton = styled(Button)`
-    background-color: rgb(0, 128, 0);
-    transition: 1s;
+  background-color: rgb(0, 128, 0);
+  transition: 1s;
 
-        &:hover {
-            background-color: rgba(0, 128, 0, 0.75);
-        };
-        &:active {
-            background-color: rgba(0, 128, 0, 0.5);
-        };
+  &:hover {
+    background-color: rgba(0, 128, 0, 0.75);
+  }
+  &:active {
+    background-color: rgba(0, 128, 0, 0.5);
+  }
 `;
 
 export const RemoveButton = styled(Button)`
-    background-color: rgb(255, 0, 0);
-    transition: 1s;
+  background-color: rgb(255, 0, 0);
+  transition: 1s;
 
-      &:hover {
-        background-color: rgba(255, 0, 0, 0.75);
-      };
-      &:active {
-        background-color: rgba(255, 0, 0, 0.5);
-        };
+  &:hover {
+    background-color: rgba(255, 0, 0, 0.75);
+  }
+  &:active {
+    background-color: rgba(255, 0, 0, 0.5);
+  }
 `;

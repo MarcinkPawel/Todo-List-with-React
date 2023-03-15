@@ -14,11 +14,11 @@ function TaskPage() {
         <h1>Task's details</h1>
       </header>
       <Section
-        sectionHeading={task ? task.content : "Task not found"}
+        sectionHeading={task ? task.content : "Task not found!"}
         taskStatus={
           <>
-            <strong>Task's status: </strong> 
-            {task.done ? "Done" : "Not done"}{" "}
+            <strong>Task's status: </strong>
+            {task ? (task.done ? "Done" : "Not done") : "N/A"}{" "}
           </>
         }
         changeFlex
