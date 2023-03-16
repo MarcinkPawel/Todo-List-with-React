@@ -7,7 +7,7 @@ Simple To Do List .
 
 To do list is a simple and easy to use web which will not allow you to create complex and long term plans, although it is perfect day-to-day planner. It will help to go through your work day, mark completed tasks or even delete or hide those which are already done.  
 
-(![toDoListFinal](https://user-images.githubusercontent.com/103523918/225750928-4bbb1dff-d1f6-44c9-bc45-0659f44d06af.gif)
+![toDoListFinal](https://user-images.githubusercontent.com/103523918/225750928-4bbb1dff-d1f6-44c9-bc45-0659f44d06af.gif)
 
 
 
