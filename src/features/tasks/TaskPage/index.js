@@ -16,10 +16,12 @@ function TaskPage() {
       <Section
         sectionHeading={task ? task.content : "Task not found!"}
         taskStatus={
-          <>
-            <strong>Task's status: </strong>
-            {task ? (task.done ? "Done" : "Not done") : "N/A"}{" "}
-          </>
+          !!task && (
+            <>
+              <strong>Task's status: </strong>
+              {task ? (task.done ? "Done" : "Not done") : "N/A"}{" "}
+            </>
+          )
         }
         changeFlex
       />

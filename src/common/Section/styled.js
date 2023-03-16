@@ -18,12 +18,16 @@ export const SectionStyle = styled.section`
 export const Header = styled.div`
   margin: 0;
 
-  ${({ flex }) => flex && css`
+  ${({ flex }) =>
+    flex &&
+    css`
       display: flex;
       flex-direction: column;
     `}
 
-  ${({ grid }) => grid && css`
+  ${({ grid }) =>
+    grid &&
+    css`
       display: grid;
       grid-template-columns: 1fr auto;
       grid-template-rows: 50px;
