@@ -7,21 +7,19 @@ export default styled.button`
   padding: 10px 0;
   margin-right: 10px;
   align-self: center;
-  transition: 1s;
+  transition: all 1.5s ease 0s;
 
   ${({ disabled }) =>
     disabled &&
     css`
       color: grey;
-      transform: none;
+      transition: none;
     `}
 
   &:hover {
     color: rgba(31, 100, 100, 0.74);
-    transform: scale(1.1);
   }
   &:active {
     color: rgba(0, 128, 128, 0.5);
-    transform: scale(1.1);
   }
 `;
