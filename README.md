@@ -30,7 +30,6 @@ Its content was built with the use of my knoweledge at that time
 The final product was made thanks to great help and supervision of YouCode team. 
 
 <hr>
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
